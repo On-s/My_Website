@@ -1,0 +1,68 @@
+#wrap {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+
+/* header --------------------------------------------------------- */
+
+#headerCon {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-image: url("../../res/bg/header_bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+h1 {
+  color: #fff;
+}
+
+.down_scroll i {
+  color: #fff;
+  transform: scaleX(1.2);
+  font-size: 2rem;
+  position: absolute;
+  bottom: 5%;
+  animation: scaleBounce 0.5s alternate infinite;
+}
+
+.down_scroll i:hover {
+  color: #555;
+  opacity: 0.8;
+  animation-play-state: paused;
+}
+
+@keyframes scaleBounce {
+  from {
+    transform: scaleX(0)
+  }
+  to {
+    transform: scaleX(1.6)
+  }
+}
+
+/* infographics --------------------------------------------------------- */
+#infographics {
+  width: 100%;
+  height: 100vh;
+  background-color: #555;
+}
+
+
+
+/* portfolio -------------------------------------------------------------- */
+#portfolio {
+  width: 100%;
+  height: 100vh;
+  background-color: #ddd;
+}
