@@ -2,6 +2,9 @@ let permission = true;
 const html = document.getElementsByTagName('html')[0];
 const wrap = document.getElementById('wrap');
 
+const header = wrap.querySelector('header');
+const downScrollBtn = header.querySelector('button');
+
 let scrollMove;
 
 let page = 0;
@@ -32,14 +35,15 @@ scrollMove = function (e) {
     }
 
     if (delta > 0) {
-      if (page === 0) return;
+      if (page === 0) return permission = true;
       page--;
+      console.log(delta, page);
     };
 
     if (delta < 0) {
-      if (page === 2) return;
+      if (page === 2) return permission = true;
       page++;
-
+      console.log(delta, page);
     }
     console.log(page);
     scrollToanime();
@@ -50,4 +54,21 @@ scrollMove = function (e) {
 wrap.addEventListener('mousewheel', scrollMove, true);
 wrap.addEventListener('DOMMouseScroll', scrollMove, false);
 
-// 새로고침시 맨위로 올라가게 만들어야한다.
+// 새로고침시 맨위로 올라가기
+window.onload = function () {
+  setTimeout(() => {
+    scrollTo(0, 0);
+    page = 0;
+    permission = true;
+  }, 100);
+}
+
+
+
+downScrollBtn.addEventListener('click', function (e) {
+  if (permission) {
+    permission = false;
+    page++;
+    scrollToanime();
+  }
+}); 

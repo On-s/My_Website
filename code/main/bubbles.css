@@ -1,0 +1,83 @@
+#wrap {
+  position: relative;
+}
+
+.bubbleCon {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 100%;
+  max-width: 15rem;
+  transform: translateX(-50%);
+  opacity: 0.75;
+  overflow: visible;
+}
+
+.bubbles {
+  position: absolute;
+  width: 100%;
+  height: auto;
+}
+.bubbles circle {
+  stroke: white;
+  fill: none;
+}
+
+.bubbles_size {
+  overflow: visible;
+}
+.bubbles_size > g {
+  transform: translateY(1000px);
+  opacity: 0;
+  will-change: transform, opacity;
+}
+
+.bubbles_size g:nth-of-type(1) {
+  animation: up 7s infinite;
+}
+
+.bubbles_size g:nth-of-type(1) g {
+  transform: translateX(900px);
+}
+.bubbles_size g:nth-of-type(1) circle {
+  animation: wobble 2s infinite ease-in-out;
+}
+
+.bubbles_size g:nth-of-type(2) {
+  animation: up 5s infinite;
+}
+.bubbles_size g:nth-of-type(2) g {
+  transform: translateX(400px);
+}
+.bubbles_size g:nth-of-type(2) circle {
+  animation: wobble 2s infinite ease-in-out;
+}
+
+/* 흔들리는효과 */
+@keyframes wobble {
+  33% {
+    transform: translateX(-50px);
+  }
+
+  66% {
+    transform: translateX(50px);
+  }
+}
+
+/* 올라가는 효과 */
+@keyframes up {
+  0% {
+    opacity: 0;
+  }
+
+  10%,
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-1024px);
+  }
+
+}
