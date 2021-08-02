@@ -12,7 +12,8 @@ const projectLink = {
   "Renewal Website": {
     "link": "https://renewal-website.vercel.app/html/bhc_renewal_main.html",
     "explanation": "반응형으로 웹사이트를 리뉴얼",
-    "Date": "21.08.14"
+    "Date": "21.08.14",
+    "img" : "../res/"
   },
   "data01": {
     "link": "https://naver.com",
@@ -53,31 +54,42 @@ for (const i in projectLink) {
 }
 
 // Li 생성
-function mLi(count , position) {
+function mLi(count, position) {
   for (let i = 0; i < count; i++) {
     let mLi = document.createElement('li');
-    let con = `<a href="${linkArray[i]}">${Object.keys(projectLink)[i]}</a><div class="explanation">${exArray[i]}</div>`;
+    let con = `<a href="${linkArray[i]}">${Object.keys(projectLink)[i]}</a><div class="explanation">${exArray[i]}</div><div class="proimg"></div>`;
     mLi.innerHTML = con;
-    mLi.style.width = (100/proLinkLen) + '%';
+    mLi.style.width = (100 / proLinkLen) + '%';
     position.appendChild(mLi);
   }
 }
-mLi(proLinkLen,proConUl);
+mLi(proLinkLen, proConUl);
 
 
 // ul 길이 변경
-proConUl.style.width = (100 * proLinkLen) + '%' ;
+proConUl.style.width = (100 * proLinkLen) + '%';
 
 
 const btnNext = proCon.querySelector('.nextbtn');
 const btnPre = proCon.querySelector('.prebtn');
 
-let conut = 1;
+let count = 1;
 
-btnNext.addEventListener('click',function(e) {
+btnNext.addEventListener('click', function (e) {
   e.preventDefault();
-  if(count <= proLinkLen)
-  this.animate([
-    // {marginLeft : }
-  ])
-})
+  if (count < proLinkLen-1) {
+    count++; 
+    setUl.style.marginLeft = (-100* count)  + '%';
+    console.log(count);
+  }
+});
+
+btnPre.addEventListener('click', function (e) {
+  e.preventDefault();
+  if (count >= 1) {
+    count--; 
+    setUl.style.marginLeft = (-100* count)  + '%';
+    console.log(count);
+  }
+});
+

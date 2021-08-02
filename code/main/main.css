@@ -58,6 +58,30 @@ h1 {
   width: 100%;
   height: 100vh;
   background-color: #555;
+  padding-top: 10vh;
+  box-sizing: border-box;
+}
+
+.infoCon {
+  position: relative;
+  width: 80%;
+  height: 80vh;
+  margin: auto;
+  /* margin-top: 10vh; */
+  background-color: #777;
+  text-align: center;
+}
+
+.my_picture {
+  display: block;
+  width: 200px;
+  height: 240px;
+  margin: auto;
+  margin-bottom: 2rem;
+  background-color: #fff;
+}
+.about_me {
+  margin-bottom: 2rem;
 }
 
 
@@ -92,6 +116,7 @@ h1 {
   float: left;
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100%;
   background-color: #333;
@@ -100,12 +125,19 @@ h1 {
   position: absolute;
   top: 10%;
   text-align: center;
+  font-size: 3rem;
 }
 
 .explanation {
   position: absolute;
   bottom: 10%;
   height: auto;
+}
+
+.proimg { 
+  width: 80%;
+  height: 80%;
+  background-color: #fff;
 }
 
 .nextbtn , .prebtn {

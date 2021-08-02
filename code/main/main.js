@@ -5,6 +5,8 @@ const wrap = document.getElementById('wrap');
 const header = wrap.querySelector('header');
 const downScrollBtn = header.querySelector('button');
 
+const nav = wrap.querySelector('.nav');
+
 let scrollMove;
 
 let page = 0;
@@ -72,3 +74,32 @@ downScrollBtn.addEventListener('click', function (e) {
     scrollToanime();
   }
 }); 
+
+
+const home = nav.querySelector('.nav_home');
+const aboutMe = nav.querySelector('.nav_aboutme');
+const projects = nav.querySelector('.nav_projects');
+
+home.addEventListener('click',function() {
+  if (permission) {
+    permission = false;
+    page = 0;
+    scrollToanime();
+  }
+});
+
+aboutMe.addEventListener('click',function () {
+  if (permission) {
+    permission = false;
+    page = 1;
+    scrollToanime();
+  }
+})
+
+projects.addEventListener('click',function () {
+  if (permission) {
+    permission = false;
+    page = 2;
+    scrollToanime();
+  }
+})
