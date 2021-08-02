@@ -21,14 +21,14 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
 }
 
 h1 {
   color: #fff;
 }
 
-.down_scroll i {
+.down_scroll i, .down_scroll2 i , .down_scroll3 i{
   color: #fff;
   transform: scaleX(1.2);
   font-size: 2rem;
@@ -37,10 +37,15 @@ h1 {
   animation: scaleBounce 0.5s alternate infinite;
 }
 
-.down_scroll i:hover {
+.down_scroll i:hover, .down_scroll2 i:hover , .down_scroll3 i:hover {
   color: #555;
   opacity: 0.8;
   animation-play-state: paused;
+}
+.down_scroll3 {
+  position: absolute;
+  left: 50%;
+  bottom: 2%;
 }
 
 @keyframes scaleBounce {
@@ -57,7 +62,7 @@ h1 {
 #infographics {
   width: 100%;
   height: 100vh;
-  background-color: #555;
+  background: linear-gradient(to right top, #1C1F42 66%, #1C2850);
   padding-top: 10vh;
   box-sizing: border-box;
 }
@@ -90,7 +95,7 @@ h1 {
 #project {
   width: 100%;
   height: 100vh;
-  background-color: #ddd;
+  background-color: #1C1F42;
   padding-top: 10vh;
   box-sizing: border-box;
 }
@@ -142,6 +147,7 @@ h1 {
 
 .nextbtn , .prebtn {
   position: absolute;
+  color: #f2f2f2;
   z-index: 10;
   top: 50%; transform: translateX(-50%);
   font-size: 2rem;
@@ -175,6 +181,7 @@ h1 {
 }
 
 .nav li {
+  color: #f2f2f2;
   margin-bottom: 30px;
 }
 

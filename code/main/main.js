@@ -3,7 +3,9 @@ const html = document.getElementsByTagName('html')[0];
 const wrap = document.getElementById('wrap');
 
 const header = wrap.querySelector('header');
-const downScrollBtn = header.querySelector('button');
+const downScrollBtn = header.querySelector('.down_scroll');
+const downScrollBtn2 = document.querySelector('.down_scroll2');
+const downScrollBtn3 = document.querySelector('.down_scroll3');
 
 const nav = wrap.querySelector('.nav');
 
@@ -75,7 +77,23 @@ downScrollBtn.addEventListener('click', function (e) {
   }
 }); 
 
+downScrollBtn2.addEventListener('click', function (e) {
+  if (permission) {
+    permission = false;
+    page++;
+    scrollToanime();
+  }
+}); 
 
+downScrollBtn3.addEventListener('click', function (e) {
+  if (permission) {
+    permission = false;
+    page=0;
+    scrollToanime();
+  }
+}); 
+
+//  side btn 구현
 const home = nav.querySelector('.nav_home');
 const aboutMe = nav.querySelector('.nav_aboutme');
 const projects = nav.querySelector('.nav_projects');
