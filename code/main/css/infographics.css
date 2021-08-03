@@ -24,7 +24,7 @@
   float: left;
   display: block;
   position: absolute;
-  top: 20%; left: 5%;
+  top: 33.33333%; left: 5%;
   width: 7.5rem;
   height: 10rem;
   background-color: #fff;
@@ -35,6 +35,7 @@
   width: 80%;
   height: 100%;
   float: right;
+  margin-top: 3rem;
 }
 
 .about_con,
@@ -80,15 +81,17 @@
 }
 
 .skills {
-  width: 100%;
+  width: 80%;
   height: 100%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(6, 1fr);
 }
 .skills div {
+  display: flex;
   color: #f2f2f2;
   text-align: left;
+  align-items: center;
 }
 
 .html {
@@ -122,8 +125,8 @@
 }
 
 .logo_img {
-  width: 5rem;
-  height: 5rem;
+  width: 3rem;
+  height: 3rem;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;

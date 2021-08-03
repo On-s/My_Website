@@ -54,6 +54,7 @@ h1 {
 .down_scroll2 {
   position: absolute;
   left: 50%;
+  bottom: 2%;
 }
 
 .down_scroll3 {
