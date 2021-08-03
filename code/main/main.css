@@ -16,7 +16,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   background-image: url("../../res/bg/header_bg.png");
   background-position: center;
   background-repeat: no-repeat;
@@ -28,7 +27,14 @@ h1 {
   color: #fff;
 }
 
-.down_scroll i, .down_scroll2 i , .down_scroll3 i{
+.try {
+  color: #f2f2f2;
+}
+
+
+.down_scroll i,
+.down_scroll2 i,
+.down_scroll3 i {
   color: #fff;
   transform: scaleX(1.2);
   font-size: 2rem;
@@ -37,11 +43,14 @@ h1 {
   animation: scaleBounce 0.5s alternate infinite;
 }
 
-.down_scroll i:hover, .down_scroll2 i:hover , .down_scroll3 i:hover {
+.down_scroll i:hover,
+.down_scroll2 i:hover,
+.down_scroll3 i:hover {
   color: #555;
   opacity: 0.8;
   animation-play-state: paused;
 }
+
 .down_scroll3 {
   position: absolute;
   left: 50%;
@@ -67,7 +76,7 @@ h1 {
   box-sizing: border-box;
 }
 
-.infoCon {
+.info_con {
   position: relative;
   width: 80%;
   height: 80vh;
@@ -75,20 +84,21 @@ h1 {
   /* margin-top: 10vh; */
   background-color: #777;
   text-align: center;
+  padding: 2rem;
+  box-sizing: border-box;
 }
 
 .my_picture {
   display: block;
-  width: 200px;
-  height: 240px;
-  margin: auto;
+  width: 12.5rem;
+  height: 15rem;
   margin-bottom: 2rem;
   background-color: #fff;
 }
-.about_me {
-  margin-bottom: 2rem;
-}
 
+.about_con {}
+
+.skill_con {}
 
 
 /* project -------------------------------------------------------------- */
@@ -110,13 +120,13 @@ h1 {
   overflow-x: hidden;
 }
 
-.proCon ul{ 
+.proCon ul {
   width: 100%;
   height: 100%;
   background-color: #fff;
 }
 
-.proCon li{
+.proCon li {
   position: relative;
   float: left;
   display: flex;
@@ -126,11 +136,12 @@ h1 {
   height: 100%;
   background-color: #333;
 }
-.proCon li > a {
+
+.proCon li>a {
   position: absolute;
   top: 10%;
   text-align: center;
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 .explanation {
@@ -139,23 +150,27 @@ h1 {
   height: auto;
 }
 
-.proimg { 
+.proimg {
   width: 80%;
   height: 80%;
   background-color: #fff;
 }
 
-.nextbtn , .prebtn {
+.nextbtn,
+.prebtn {
   position: absolute;
   color: #f2f2f2;
   z-index: 10;
-  top: 50%; transform: translateX(-50%);
+  top: 50%;
+  transform: translateX(-50%);
   font-size: 2rem;
 }
-.nextbtn { 
+
+.nextbtn {
   right: 5%;
 }
-.prebtn { 
+
+.prebtn {
   left: 5%;
 }
 
@@ -189,5 +204,3 @@ h1 {
   opacity: 0.8;
   transform: scale(1.1);
 }
-
-

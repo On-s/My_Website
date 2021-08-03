@@ -75,7 +75,7 @@ downScrollBtn.addEventListener('click', function (e) {
     page++;
     scrollToanime();
   }
-}); 
+});
 
 downScrollBtn2.addEventListener('click', function (e) {
   if (permission) {
@@ -83,22 +83,9 @@ downScrollBtn2.addEventListener('click', function (e) {
     page++;
     scrollToanime();
   }
-}); 
+});
 
 downScrollBtn3.addEventListener('click', function (e) {
-  if (permission) {
-    permission = false;
-    page=0;
-    scrollToanime();
-  }
-}); 
-
-//  side btn 구현
-const home = nav.querySelector('.nav_home');
-const aboutMe = nav.querySelector('.nav_aboutme');
-const projects = nav.querySelector('.nav_projects');
-
-home.addEventListener('click',function() {
   if (permission) {
     permission = false;
     page = 0;
@@ -106,7 +93,20 @@ home.addEventListener('click',function() {
   }
 });
 
-aboutMe.addEventListener('click',function () {
+//  side btn 구현
+const home = nav.querySelector('.nav_home');
+const aboutMe = nav.querySelector('.nav_aboutme');
+const projects = nav.querySelector('.nav_projects');
+
+home.addEventListener('click', function () {
+  if (permission) {
+    permission = false;
+    page = 0;
+    scrollToanime();
+  }
+});
+
+aboutMe.addEventListener('click', function () {
   if (permission) {
     permission = false;
     page = 1;
@@ -114,7 +114,7 @@ aboutMe.addEventListener('click',function () {
   }
 })
 
-projects.addEventListener('click',function () {
+projects.addEventListener('click', function () {
   if (permission) {
     permission = false;
     page = 2;

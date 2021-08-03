@@ -13,7 +13,7 @@ const projectLink = {
     "link": "https://renewal-website.vercel.app/html/bhc_renewal_main.html",
     "explanation": "반응형으로 웹사이트를 리뉴얼",
     "Date": "21.08.14",
-    "img" : "../res/"
+    "img": "../res/"
   },
   "data01": {
     "link": "https://naver.com",
@@ -77,9 +77,9 @@ let count = 1;
 
 btnNext.addEventListener('click', function (e) {
   e.preventDefault();
-  if (count < proLinkLen-1) {
-    count++; 
-    setUl.style.marginLeft = (-100* count)  + '%';
+  if (count < proLinkLen - 1) {
+    count++;
+    setUl.style.marginLeft = (-100 * count) + '%';
     console.log(count);
   }
 });
@@ -87,9 +87,8 @@ btnNext.addEventListener('click', function (e) {
 btnPre.addEventListener('click', function (e) {
   e.preventDefault();
   if (count >= 1) {
-    count--; 
-    setUl.style.marginLeft = (-100* count)  + '%';
+    count--;
+    setUl.style.marginLeft = (-100 * count) + '%';
     console.log(count);
   }
 });
-
