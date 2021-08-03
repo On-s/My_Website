@@ -1,0 +1,50 @@
+/* infographics --------------------------------------------------------- */
+#infographics {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to right top, #1C1F42 66%, #1C2850);
+  padding-top: 10vh;
+  box-sizing: border-box;
+}
+
+.info_con {
+  position: relative;
+  width: 80%; min-width: 75rem;
+  height: 80vh;
+  margin: auto;
+  /* margin-top: 10vh; */
+  background-color: #777;
+  text-align: center;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.my_picture {
+  float: left;
+  display: block;
+  width: 12.5rem;
+  height: 15rem;
+  margin-bottom: 2rem;
+  background-color: #fff;
+}
+.text_con {
+  position: relative;
+  width: 80%; 
+  height: 100%;
+  float: right;
+}
+
+.about_con,.skill_con {
+  position: absolute;
+  width: 100%;
+  height: 80%;
+  background-color: #fff;
+}
+
+.tab_con {
+  width: 12.5rem;
+  height: 10%;
+  background-color: #fff;
+  margin-bottom: 2rem;
+}

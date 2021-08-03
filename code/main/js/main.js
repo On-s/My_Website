@@ -1,3 +1,5 @@
+// 바닐라 JS 로 구현
+setTimeout(() => {
 let permission = true;
 const html = document.getElementsByTagName('html')[0];
 const wrap = document.getElementById('wrap');
@@ -14,6 +16,8 @@ let scrollMove;
 let page = 0;
 let htmlh = html.clientHeight;
 
+
+// scroll 이동 애니메이션
 let scrollToanime = function () {
   let moveh = htmlh * page;
   window.scrollTo({
@@ -25,7 +29,7 @@ let scrollToanime = function () {
   }, 500);
 };
 
-
+// 스크롤움직임이 감지됬을경우
 scrollMove = function (e) {
   e.preventDefault();
   if (permission) {
@@ -58,17 +62,8 @@ scrollMove = function (e) {
 wrap.addEventListener('mousewheel', scrollMove, true);
 wrap.addEventListener('DOMMouseScroll', scrollMove, false);
 
-// 새로고침시 맨위로 올라가기
-window.onload = function () {
-  setTimeout(() => {
-    scrollTo(0, 0);
-    page = 0;
-    permission = true;
-  }, 100);
-}
 
-
-
+// 다운버튼 클릭시
 downScrollBtn.addEventListener('click', function (e) {
   if (permission) {
     permission = false;
@@ -84,7 +79,7 @@ downScrollBtn2.addEventListener('click', function (e) {
     scrollToanime();
   }
 });
-
+// 업버튼 클릭시 
 downScrollBtn3.addEventListener('click', function (e) {
   if (permission) {
     permission = false;
@@ -98,6 +93,7 @@ const home = nav.querySelector('.nav_home');
 const aboutMe = nav.querySelector('.nav_aboutme');
 const projects = nav.querySelector('.nav_projects');
 
+// 각 사이드버튼 클릭시 이동
 home.addEventListener('click', function () {
   if (permission) {
     permission = false;
@@ -112,7 +108,7 @@ aboutMe.addEventListener('click', function () {
     page = 1;
     scrollToanime();
   }
-})
+});
 
 projects.addEventListener('click', function () {
   if (permission) {
@@ -120,4 +116,15 @@ projects.addEventListener('click', function () {
     page = 2;
     scrollToanime();
   }
-})
+});
+}, 50);
+
+// 새로고침시 맨위로 올라가기
+window.onload = function () {
+  setTimeout(() => {
+    scrollTo(0, 0);
+    page = 0;
+    permission = true;
+  }, 100);
+}
+
