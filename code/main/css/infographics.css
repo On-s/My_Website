@@ -23,9 +23,10 @@
 .my_picture {
   float: left;
   display: block;
-  width: 12.5rem;
-  height: 15rem;
-  margin-bottom: 2rem;
+  position: absolute;
+  top: 20%; left: 5%;
+  width: 7.5rem;
+  height: 10rem;
   background-color: #fff;
 }
 
@@ -55,7 +56,7 @@
 }
 .about_con hr {
   display: block;
-  width: 60%;
+  width: 50%;
   height: 2.25rem;
   margin: auto;
   margin-bottom: 3rem;
@@ -87,6 +88,7 @@
 }
 .skills div {
   color: #f2f2f2;
+  text-align: left;
 }
 
 .html {
