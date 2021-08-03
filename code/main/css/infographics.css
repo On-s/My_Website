@@ -10,11 +10,11 @@
 
 .info_con {
   position: relative;
-  width: 80%; min-width: 75rem;
+  width: 80%;
+  min-width: 75rem;
   height: 80vh;
   margin: auto;
   /* margin-top: 10vh; */
-  background-color: #777;
   text-align: center;
   padding: 2rem;
   box-sizing: border-box;
@@ -28,23 +28,99 @@
   margin-bottom: 2rem;
   background-color: #fff;
 }
+
 .text_con {
   position: relative;
-  width: 80%; 
+  width: 80%;
   height: 100%;
   float: right;
 }
 
-.about_con,.skill_con {
+.about_con,
+.skill_con {
   position: absolute;
   width: 100%;
   height: 80%;
   background-color: #fff;
 }
 
+.about_con {
+  display: block;
+}
+
+.skill_con {
+  display: none;
+}
+
+.skills {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+}
+
+.html {
+  background-image: url('../../../res/icon/Logo/HTML5_Logo.svg');
+}
+
+.css {
+  background-image: url('../../../res/icon/Logo/CSS3_Logo.svg');
+}
+
+.js {
+  background-image: url('../../../res/icon/Logo/JS_Logo.svg');
+}
+
+.jq {
+  background-image: url('../../../res/icon/Logo/JQuery-Logo.svg');
+}
+
+.ai {
+  background-image: url('../../../res/icon/Logo/adobe-illustrator-cc-seeklogo.com.svg');
+}
+
+.ps {
+  background-image: url('../../../res/icon/Logo/adobe-photoshop-cc-seeklogo.com.svg');
+}
+
+.progressTag {
+  width: 80%;
+  height: 2rem;
+}
+
+.logo_img {
+  width: 5rem;
+  height: 5rem;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  margin: auto;
+}
+
+.bar_con {
+  display: flex;
+  align-items: center;
+  margin: 1rem;
+}
+
 .tab_con {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 12.5rem;
   height: 10%;
-  background-color: #fff;
   margin-bottom: 2rem;
+}
+
+.fa-male,
+.fa-book {
+  color: #f2f2f2;
+  font-size: 3rem;
+}
+
+.fa-male span,
+.fa-book span {
+  display: block;
+  font-size: 1rem;
 }

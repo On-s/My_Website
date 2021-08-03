@@ -26,7 +26,7 @@ let scrollToanime = function () {
   });
   setTimeout(function () {
     permission = true;
-  }, 500);
+  }, 400);
 };
 
 // 스크롤움직임이 감지됬을경우
