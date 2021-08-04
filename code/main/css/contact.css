@@ -7,3 +7,9 @@
   box-sizing: border-box;
 }
 
+.page_intend {
+  position: absolute;
+  bottom: 10%;
+  padding: 3rem;
+  color: #f2f2f2;
+}
