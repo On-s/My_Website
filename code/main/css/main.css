@@ -30,6 +30,11 @@ h1 {
 .try {
   color: #f2f2f2;
 }
+.down_scroll ,.down_scroll2,.up_scroll {
+  position: absolute;
+  bottom: 5%;
+}
+
 
 
 .down_scroll i,
@@ -38,8 +43,6 @@ h1 {
   color: #fff;
   transform: scaleX(1.2);
   font-size: 2rem;
-  position: absolute;
-  bottom: 5%;
   animation: scaleBounce 0.5s alternate infinite;
 }
 

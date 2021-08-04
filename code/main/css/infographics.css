@@ -26,8 +26,8 @@
   position: absolute;
   top: 33.33333%;
   left: 5%;
-  width: 7.5rem;
-  height: 10rem;
+  width: 7rem;
+  height: 7.5rem;
   background-color: #fff;
 }
 
@@ -43,6 +43,7 @@
 .skill_con {
   position: absolute;
   width: 100%;
+  margin-top: 5rem;
   height: 80%;
 }
 
@@ -50,14 +51,24 @@
   display: block;
 }
 
-.about_con dt,
+
 .about_con dl {
   color: #f2f2f2;
 }
 
 .about_con dt {
-  font-size: 3rem;
-
+  
+  font:700 4em/1 "Calibri";
+  letter-spacing: 0;
+  display: block;
+  /* text-shadow: 0 0 80px rgba(255, 255, 255, 0); */
+  background: url('../../../res/img/text_fill.png') repeat-y;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: aitf 60s linear infinite;
+  -webkit-text-fill-color: transparent;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
 }
 
 .about_con hr {
@@ -149,6 +160,8 @@
 }
 
 .tab_con {
+  position: absolute;
+  top: -15%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -235,7 +248,17 @@
 
 .fa-male,
 .fa-book {
-  color: #f2f2f2;
+  color: #7681A3;
   font-size: 3rem;
 }
 
+
+
+@keyframes aitf {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
