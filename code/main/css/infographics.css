@@ -24,8 +24,8 @@
   float: left;
   display: block;
   position: absolute;
-  top: 33.33333%;
-  left: 5%;
+  top: 50%;
+  left: 15%;
   width: 7rem;
   height: 7.5rem;
   background-color: #fff;
@@ -58,14 +58,14 @@
 
 .about_con dt {
   
-  font:700 4em/1 "Calibri";
+  font:700 5rem "Calibri";
   letter-spacing: 0;
   display: block;
   /* text-shadow: 0 0 80px rgba(255, 255, 255, 0); */
   background: url('../../../res/img/text_fill.png') repeat-y;
   -webkit-background-clip: text;
   background-clip: text;
-  animation: aitf 60s linear infinite;
+  animation: aitf 120s linear infinite;
   -webkit-text-fill-color: transparent;
   transform: translate3d(0, 0, 0);
   backface-visibility: hidden;
@@ -79,12 +79,16 @@
   margin-bottom: 3rem;
 }
 
-.about_con dd {
+.about_con dl > dd {
   padding: 1rem;
 }
 
 .skill_con {
   display: none;
+}
+
+.about_con dd:nth-child(3) {
+  color: #9292f2;
 }
 
 
@@ -247,9 +251,15 @@
 
 
 .fa-male,
-.fa-book {
+.fa-cogs {
   color: #7681A3;
   font-size: 3rem;
+}
+
+.fa-male p,
+.fa-cogs p {
+  color: #f2f2f2;
+  margin-top: 0.75rem;
 }
 
 
