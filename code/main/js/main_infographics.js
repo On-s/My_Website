@@ -5,13 +5,11 @@ const text_con = info_con.querySelector('.text_con');
 
 const tab_con = text_con.querySelector('.tab_con');
 
-let aboutBtn = tab_con.querySelector('.fa-male');
-let skillBtn = tab_con.querySelector('.fa-book');
+let aboutBtn = tab_con.getElementsByClassName('btn_box')[0];
+let skillBtn = tab_con.getElementsByClassName('btn_box')[1];
 
 const aboutCon = text_con.querySelector('.about_con');
 const skillCon = text_con.querySelector('.skill_con');
-
-
 
 
 let progress_html = document.getElementsByTagName('progress')[0];

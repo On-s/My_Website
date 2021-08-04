@@ -1,0 +1,9 @@
+#contact {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to bottom, #1C1F42 40%, #080f25);
+  padding-top: 10vh;
+  box-sizing: border-box;
+}
+

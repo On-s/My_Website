@@ -34,7 +34,7 @@ h1 {
 
 .down_scroll i,
 .down_scroll2 i,
-.down_scroll3 i {
+.up_scroll i {
   color: #fff;
   transform: scaleX(1.2);
   font-size: 2rem;
@@ -45,7 +45,7 @@ h1 {
 
 .down_scroll i:hover,
 .down_scroll2 i:hover,
-.down_scroll3 i:hover {
+.up_scroll i:hover {
   color: #555;
   opacity: 0.8;
   animation-play-state: paused;
@@ -57,7 +57,7 @@ h1 {
   bottom: 2%;
 }
 
-.down_scroll3 {
+.up_scroll {
   position: absolute;
   left: 50%;
   bottom: 2%;
@@ -89,6 +89,7 @@ h1 {
 
 }
 
+
 .nav ul {
   display: flex;
   width: 100%;
@@ -99,11 +100,27 @@ h1 {
 }
 
 .nav li {
-  color: #f2f2f2;
+  width: 8rem;
+  height: 2rem;
   margin-bottom: 30px;
+  line-height: 2rem;
+  text-align: center;
+  font-weight: 600;
+}
+.nav_home, .nav_aboutme, .nav_projects, .nav_contact {
+  color: #f2f2f2;
 }
 
 .nav li:hover {
+  cursor: pointer;
   opacity: 0.8;
   transform: scale(1.1);
+}
+
+
+.add {
+  color: #000058;
+  transform: scale(1.05);
+  background-color: rgba(235,235,235,0.3);
+  border-radius: 2rem;
 }
