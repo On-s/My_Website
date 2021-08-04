@@ -99,6 +99,7 @@
   width: 33.33333%;
   margin: auto;
   padding: 1rem;
+  line-height: 2rem;
   text-align: left;
 }
 
@@ -290,6 +291,15 @@
   border-bottom: 3px solid rgba(146, 146, 242, 1);
   transform: scale(1.1);
   cursor: pointer;
+}
+
+.whale {
+  float: left;
+  width: 2rem; height: 2rem;
+  background-image: url('../../../res/icon/whale.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding-right: 1rem ;
 }
 
 
