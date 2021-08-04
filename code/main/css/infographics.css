@@ -57,20 +57,36 @@
 }
 
 .about_con dt {
-  
+  position: relative;
+  z-index:100;
   font:700 5rem "Calibri";
-  letter-spacing: 0;
-  display: block;
-  /* text-shadow: 0 0 80px rgba(255, 255, 255, 0); */
-  background: url('../../../res/img/text_fill.png') repeat-y;
-  -webkit-background-clip: text;
+  text-transform: uppercase;
+  letter-spacing: 0;  
+  color:transparent;
+}
+.about_con dt:before{
+  content:"about me"; display:block;
+  position: absolute; top: 0; left: 0; 
+  width: 100%; height: 100%;
+  /* text-shadow: -0.1rem -0.1rem 0.01rem rgba(0, 0, 0, 0.9); */
+  background: url('../../../res/img/text_fill5.png') repeat-y;
+  /* fill:drop-shadow(0.2rem 0.2rem 0.1rem rgba(255, 255, 255, 0)); */
   background-clip: text;
+  -webkit-background-clip: text;
   animation: aitf 120s linear infinite;
   -webkit-text-fill-color: transparent;
   transform: translate3d(0, 0, 0);
   backface-visibility: hidden;
-}
 
+}
+.about_con dt:after {
+  content:"about me";  text-transform: uppercase;
+  position: absolute; top: 0; left: 0; z-index:-1;
+  width: 100%; height: 100%; 
+  color:#fff; font-size:5rem;
+  transform:translate(1px, 1px);
+  opacity: 0.5;
+}
 .about_con hr {
   display: block;
   width: 50%;
@@ -80,7 +96,10 @@
 }
 
 .about_con dl > dd {
+  width: 33.33333%;
+  margin: auto;
   padding: 1rem;
+  text-align: left;
 }
 
 .skill_con {
@@ -100,6 +119,7 @@
   line-height: 5rem;
   border: 2px groove #f2f2f2;
   background-color: rgba(225, 225, 225, 0.2);
+  text-align: center;
 }
 
 .skills {
@@ -189,9 +209,12 @@
 .tab_con .btn_box span {
   display: block;
   position: absolute;
-  transition: all .1s;
+  transition: all 0.2s;
   background: #9292f2;
   z-index: 2;
+}
+.btn_box {
+  border-bottom: 1px solid rgba(146, 146, 242, 0.3);
 }
 
 .tab_con .btn_box span:nth-child(1) {
@@ -228,24 +251,24 @@
 
 .tab_con .btn_box:hover span:nth-child(2) {
   height: 100%;
-  transition-delay: .1s;
+  transition-delay: .2s;
 }
 
 .tab_con .btn_box:hover span:nth-child(3) {
   width: 100%;
-  transition-delay: .2s;
+  transition-delay: .4s;
 }
 
 .tab_con .btn_box:hover span:nth-child(4) {
   height: 100%;
-  transition-delay: .3s;
+  transition-delay: .6s;
 }
 .btn_box:hover {
   cursor: pointer;
 }
 .btn_box:focus {
-  border: 2px solid rgba(146, 146, 242, 0.3);
-  transform: scale(1.05);
+  border-bottom: 3px solid rgba(146, 146, 242, 1);
+  transform: scale(1.1);
   cursor: pointer;
 }
 
@@ -260,8 +283,14 @@
 .fa-cogs p {
   color: #f2f2f2;
   margin-top: 0.75rem;
+  text-transform: uppercase;
 }
 
+.select_btn {
+  border-bottom: 3px solid rgba(146, 146, 242, 1);
+  transform: scale(1.1);
+  cursor: pointer;
+}
 
 
 @keyframes aitf {

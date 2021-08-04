@@ -30,7 +30,16 @@ h1 {
 .try {
   color: #f2f2f2;
 }
-.down_scroll ,.down_scroll2,.up_scroll {
+
+.ons {
+  color: #f2f2f2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 2rem;
+  font-weight: bolder;
+}
+.down_scroll ,.down_scroll2,.down_scroll3,.up_scroll {
   position: absolute;
   bottom: 5%;
 }
@@ -39,6 +48,7 @@ h1 {
 
 .down_scroll i,
 .down_scroll2 i,
+.down_scroll3 i,
 .up_scroll i {
   color: #fff;
   transform: scaleX(1.2);
@@ -48,6 +58,7 @@ h1 {
 
 .down_scroll i:hover,
 .down_scroll2 i:hover,
+.down_scroll3 i:hover,
 .up_scroll i:hover {
   color: #555;
   opacity: 0.8;
@@ -55,9 +66,12 @@ h1 {
 }
 
 .down_scroll2 {
-  position: absolute;
   left: 50%;
   bottom: 2%;
+}
+
+.down_scroll3 {
+  left: 50%;
 }
 
 .up_scroll {

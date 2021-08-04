@@ -7,6 +7,7 @@ setTimeout(() => {
   const header = wrap.querySelector('header');
   const downScrollBtn = header.querySelector('.down_scroll');
   const downScrollBtn2 = document.querySelector('.down_scroll2');
+  const downScrollBtn3 = document.querySelector('.down_scroll3');
   const upScrollBtn = document.querySelector('.up_scroll');
   
   const nav = wrap.querySelector('.nav');
@@ -53,7 +54,6 @@ setTimeout(() => {
         if (page === 0) return permission = true;
         page--;
       };
-
       if (delta < 0) {
         if (page === 3) return permission = true;
         page++;
@@ -114,6 +114,14 @@ setTimeout(() => {
   });
 
   downScrollBtn2.addEventListener('click', function (e) {
+    if (permission) {
+      permission = false;
+      page++;
+      scrollToanime();
+      pagetab();
+    }
+  });
+  downScrollBtn3.addEventListener('click', function (e) {
     if (permission) {
       permission = false;
       page++;

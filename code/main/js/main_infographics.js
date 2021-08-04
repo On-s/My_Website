@@ -20,7 +20,7 @@ let progress_ai = document.getElementsByTagName('progress')[4];
 let progress_ps = document.getElementsByTagName('progress')[5];
 
 
-let proArr = [progress_html,progress_css,progress_js,progress_jq,progress_ai,progress_ps];
+let proArr = [progress_html, progress_css, progress_js, progress_jq, progress_ai, progress_ps];
 
 
 
@@ -68,6 +68,7 @@ function clickchange(data1, data2) {
   data2st.display = 'block';
 }
 
+aboutBtn.classList.add('select_btn');
 aboutBtn.addEventListener('click', function () {
   clickchange(skillCon, aboutCon);
   tag(progress_html, 0);
@@ -76,6 +77,8 @@ aboutBtn.addEventListener('click', function () {
   tag(progress_jq, 0);
   tag(progress_ai, 0);
   tag(progress_ps, 0);
+  aboutBtn.classList.add('select_btn');
+  skillBtn.classList.remove('select_btn');
 })
 
 skillBtn.addEventListener('click', function () {
@@ -86,4 +89,6 @@ skillBtn.addEventListener('click', function () {
   tag(progress_jq, 0.85);
   tag(progress_ai, 0.50);
   tag(progress_ps, 0.40);
+  skillBtn.classList.add('select_btn');
+  aboutBtn.classList.remove('select_btn');
 })
