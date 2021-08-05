@@ -32,6 +32,8 @@ jsonData.onreadystatechange = function () {
     let descriptionArr = [];
     let codelinkArr = [];
 
+    let permission = true;
+
     // 배열에 data 값 넣기
     for (const i in data) {
       let alink;
@@ -83,19 +85,31 @@ jsonData.onreadystatechange = function () {
 
     btnNext.addEventListener('click', function (e) {
       e.preventDefault();
-      if (count < proLinkLen - 1) {
-        count++;
-        setUl.style.marginLeft = (-100 * count) + '%';
-        console.log(count);
+      if (permission) {
+        permission = false;
+        if (count < proLinkLen - 1) {
+          count++;
+          setUl.style.marginLeft = (-100 * count) + '%';
+          console.log(count);
+        }
+        setTimeout(() => {
+          permission = true
+        }, 100);
       }
     });
 
     btnPre.addEventListener('click', function (e) {
       e.preventDefault();
-      if (count >= 1) {
-        count--;
-        setUl.style.marginLeft = (-100 * count) + '%';
-        console.log(count);
+      if (permission) {
+        permission = false;
+        if (count >= 1) {
+          count--;
+          setUl.style.marginLeft = (-100 * count) + '%';
+          console.log(count);
+        }
+        setTimeout(() => {
+          permission = true
+        }, 100);
       }
     });
 
