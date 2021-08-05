@@ -1,3 +1,6 @@
+let jsonData;
+let serviceData;
+
 const project = document.querySelector('#project');
 const proCon = project.querySelector('.proCon');
 
@@ -7,91 +10,93 @@ proCon.appendChild(setUl);
 const proConUl = proCon.querySelector('ul');
 
 
-// 프로젝트 데이터
-const projectLink = {
-  "Renewal Website": {
-    "link": "https://renewal-website.vercel.app/html/bhc_renewal_main.html",
-    "explanation": "반응형으로 웹사이트를 리뉴얼",
-    "Date": "21.08.14",
-    "img": "../res/"
-  },
-  "data01": {
-    "link": "https://naver.com",
-    "explanation": "01 01 01",
-    "Date": "21.08.14",
-    "img": "../res/"
-  },
-  "data02": {
-    "link": "##",
-    "explanation": "02 02 02",
-    "Date": "21.08.14",
-    "img": "../res/"
-  }
-}
-// 객체 길이구하기
-let proLinkLen = Object.keys(projectLink).length;
-
-console.log(proLinkLen);
-
-// 배열에 link,ex 값 넣기 
-let linkArr = [];
-let exArr = [];
-let pThumbnailArr = [];
-
-for (const i in projectLink) {
-  let alink;
-  alink = projectLink[i].link;
-  linkArr.push(alink);
+if (window.XMLHttpRequest) {
+  jsonData = new XMLHttpRequest();
+} else {
+  jsonData = new ActiveXObject("Microsoft.XMLHTTP");
 }
 
-for (const i in projectLink) {
-  let ex;
-  ex = projectLink[i].explanation;
-  exArr.push(ex);
-}
 
-// Li 생성
-function mLi(count, position) {
-  for (let i = 0; i < count; i++) {
-    let mLi = document.createElement('li');
-    let p_thum = `<div class="p_thum"></div>`
-    let p_Description = `<div class="p_Description"></div>`
-    let p_link = `<div class="p_link""></div>`
-    // let p_CodeSource = `<div class="p_CodeSource"></div>`
-    let p_process = `<div class="p_process"></div>`
-    let con = `<a href="${linkArr[i]}">${Object.keys(projectLink)[i]}</a><div class="explanation">${exArr[i]}</div>`;
-    let projectBox = '<div class="project_box">'+p_link+p_Description+p_thum+p_process+'</div>'
-    mLi.innerHTML = con + projectBox;
-    mLi.style.width = (100 / proLinkLen) + '%';
-    position.appendChild(mLi);
-  }
-}+
-mLi(proLinkLen, proConUl);
+jsonData.onreadystatechange = function () {
+  if (jsonData.readyState === 4 && jsonData.status === 200) {
+    console.log('success');
+
+    data = JSON.parse(jsonData.responseText);
+
+    //데이터 길이
+    let proLinkLen = Object.keys(data).length;
+
+    // 배열에 link,ex 값 넣기 
+    let linkArr = [];
+    let pThumbnailArr = [];
+    let descriptionArr = [];
+
+    // 배열에 data 값 넣기
+    for (const i in data) {
+      let alink;
+      alink = data[i].link;
+      linkArr.push(alink);
+    }
+    for (const i in data) {
+      let alink;
+      alink = data[i].img;
+      pThumbnailArr.push(alink);
+    }
+    for (const i in data) {
+      let alink;
+      alink = data[i].description;
+      descriptionArr.push(alink);
+    }
+    
+    // Li 생성
+    function mLi(count, position) {
+      for (let i = 0; i < count; i++) {
+        let mLi = document.createElement('li');
+        let p_thum = `<div class="p_thum"><img scr="${pThumbnailArr[i]}" alt="project thumnail img" class="thumimg"></div>`
+        let p_Description = `<div class="p_Description"><p>${descriptionArr[i]}</p></div>`
+        let p_link = `<div class="p_link""></div>`
+        let p_process = `<div class="p_process"></div>`
+        let con = `<a href="${linkArr[i]}">${Object.keys(data)[i]}</a>`;
+        let projectBox = '<div class="project_box">' + p_link + p_Description + p_thum + p_process + '</div>'
+        mLi.innerHTML = con + projectBox;
+        mLi.style.width = (100 / proLinkLen) + '%';
+        position.appendChild(mLi);
+      }
+    } //mLi end
+    mLi(proLinkLen, proConUl);
 
 
-// ul 길이 변경
-proConUl.style.width = (100 * proLinkLen) + '%';
+    // ul 길이 변경
+    proConUl.style.width = (100 * proLinkLen) + '%';
 
 
-const btnNext = proCon.querySelector('.nextbtn');
-const btnPre = proCon.querySelector('.prebtn');
+    // 버튼 연결 및 이벤트
+    const btnNext = proCon.querySelector('.nextbtn');
+    const btnPre = proCon.querySelector('.prebtn');
 
-let count = 1;
+    let count = 1;
 
-btnNext.addEventListener('click', function (e) {
-  e.preventDefault();
-  if (count < proLinkLen - 1) {
-    count++;
-    setUl.style.marginLeft = (-100 * count) + '%';
-    console.log(count);
-  }
-});
+    btnNext.addEventListener('click', function (e) {
+      e.preventDefault();
+      if (count < proLinkLen - 1) {
+        count++;
+        setUl.style.marginLeft = (-100 * count) + '%';
+        console.log(count);
+      }
+    });
 
-btnPre.addEventListener('click', function (e) {
-  e.preventDefault();
-  if (count >= 1) {
-    count--;
-    setUl.style.marginLeft = (-100 * count) + '%';
-    console.log(count);
-  }
-});
+    btnPre.addEventListener('click', function (e) {
+      e.preventDefault();
+      if (count >= 1) {
+        count--;
+        setUl.style.marginLeft = (-100 * count) + '%';
+        console.log(count);
+      }
+    });
+
+  } //if jsonData.readyState end
+} //jsonData.onreadystatechange end
+
+// jsonData open
+jsonData.open("GET", "../../data/project.json");
+jsonData.send();

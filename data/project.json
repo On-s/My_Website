@@ -1,19 +1,19 @@
 {
   "Renewal Website": {
     "link": "https://renewal-website.vercel.app/html/bhc_renewal_main.html",
-    "explanation": "반응형으로 웹사이트를 리뉴얼",
+    "description": "<dl><dt>bhc웹사이트를 리뉴얼한 페이지 이다.</dt><dd> <span>메인페이지</span> : header 와 footer는 Subpage에도 사용되기 때문에 공통영역으로 구분하고 반응형으로 구현 </dd><dd> <span>메뉴소개와 BHC소개 페이지</span> : jquery로 구현 </dd><dd> <span>창업정보와 고객센터</span> : ajax를 jq 와 js 로 사용하고 기능들을 바닐라 js 로 구현 </dd> <span>매장소개</span> : developers.kakao 의 지도 api 를 사용하여 구현</dd></dl>",
     "Date": "21.08.14",
     "img": "../res/"
   },
   "data01": {
     "link": "https://naver.com",
-    "explanation": "01 01 01",
+    "description": "01 01 01",
     "Date": "21.08.14",
     "img": "../res/"
   },
   "data02": {
     "link": "##",
-    "explanation": "02 02 02",
+    "description": "02 02 02",
     "Date": "21.08.14",
     "img": "../res/"
   }

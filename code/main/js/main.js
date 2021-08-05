@@ -183,10 +183,10 @@ setTimeout(() => {
 
 
 // 새로고침시 맨위로 올라가기
-window.onload = function () {
-  setTimeout(() => {
-    scrollTo(0, 0);
-    page = 0;
-    permission = true;
-  }, 100);
-}
+// window.onload = function () {
+//   setTimeout(() => {
+//     scrollTo(0, 0);
+//     page = 0;
+//     permission = true;
+//   }, 100);
+// }

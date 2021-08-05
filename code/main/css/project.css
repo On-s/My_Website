@@ -41,11 +41,6 @@
   font-size: 2.5rem;
 }
 
-.explanation {
-  position: absolute;
-  bottom: 10%;
-  height: auto;
-}
 
 .project_box {
   display: grid;
@@ -67,29 +62,45 @@
   grid-row: 1 / 5;
   padding: 2rem;
 }
-.p_Description{
+
+.p_Description {
   grid-column: 3/5;
   grid-row: 1/3;
-  background-color: #EEC74E;
-  padding: 2rem;
+  padding: 1rem;
+  overflow-y: scroll;
 }
-.p_link{
+.p_Description::-webkit-scrollbar {
+  display: none;
+}
+.p_Description dl {
+  padding: 1rem;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+.p_Description dt {
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
+}
+.p_Description dd {
+  padding-bottom: 0.5rem;
+}
+.p_Description span{
+  font-weight: bold;
+}
+
+.p_link {
   grid-column: 3/5;
   grid-row: 3/4;
   background-color: #BA4D7A;
   padding: 2rem;
 }
-.p_process{
+
+.p_process {
   grid-column: 3/5;
   grid-row: 4/5;
   background-color: #CEB8FA;
   padding: 2rem;
 }
-/* .p_CodeSource{
-  grid-column: 3/5;
-  grid-row: 3/4;
-  background-color: #10EDA1;
-} */
 
 .nextbtn,
 .prebtn {
