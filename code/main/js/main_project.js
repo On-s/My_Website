@@ -81,7 +81,7 @@ jsonData.onreadystatechange = function () {
     const btnNext = proCon.querySelector('.nextbtn');
     const btnPre = proCon.querySelector('.prebtn');
 
-    let count = 1;
+    let count = 0;
 
     btnNext.addEventListener('click', function (e) {
       e.preventDefault();
