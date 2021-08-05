@@ -33,11 +33,14 @@ jsonData.onreadystatechange = function () {
     let codelinkArr = [];
 
     let permission = true;
-
+    
+    // JSON.stringify(data.link) 로 데이터 받아오기 
+    console.log(toString.call(data.RenewalWebsite));
     // 배열에 data 값 넣기
     for (const i in data) {
       let alink;
       alink = data[i].link;
+      console.log(JSON.stringify(data[i].link));
       linkArr.push(alink);
     }
     for (const i in data) {
@@ -55,7 +58,6 @@ jsonData.onreadystatechange = function () {
       alink = data[i].code;
       codelinkArr.push(alink);
     }
-
     // Li 생성
     function mLi(count, position) {
       for (let i = 0; i < count; i++) {

@@ -11,6 +11,7 @@ let skillBtn = tab_con.getElementsByClassName('btn_box')[1];
 const aboutCon = text_con.querySelector('.about_con');
 const skillCon = text_con.querySelector('.skill_con');
 
+const progressEl = document.getElementsByTagName('progress');
 
 let progress_html = document.getElementsByTagName('progress')[0];
 let progress_css = document.getElementsByTagName('progress')[1];
@@ -69,18 +70,25 @@ function clickchange(data1, data2) {
 aboutBtn.classList.add('select_btn');
 aboutBtn.addEventListener('click', function () {
   clickchange(skillCon, aboutCon);
-  tag(progress_html, 0);
-  tag(progress_css, 0);
-  tag(progress_js, 0);
-  tag(progress_jq, 0);
-  tag(progress_ai, 0);
-  tag(progress_ps, 0);
+  // tag(progress_html, 0);
+  // tag(progress_css, 0);
+  // tag(progress_js, 0);
+  // tag(progress_jq, 0);
+  // tag(progress_ai, 0);
+  // tag(progress_ps, 0);
+  for(let i=0; i<progressEl.length; i++){
+    tag(progressEl[i], 0);
+  }
   aboutBtn.classList.add('select_btn');
   skillBtn.classList.remove('select_btn');
 })
+var skillGage = {html: 95, css:90, js:90 , jq:85, ai :50 , ps : 40}
 
 skillBtn.addEventListener('click', function () {
   clickchange(aboutCon, skillCon);
+  for(let i in skillGage){
+
+  }
   tag(progress_html, 0.95);
   tag(progress_css, 0.90);
   tag(progress_js, 0.90);

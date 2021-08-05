@@ -13,10 +13,10 @@ window.onload = function () {
 
   const nav = wrap.querySelector('.nav');
   //  side btn 구현
-  const home = nav.querySelector('.nav_home');
-  const aboutMe = nav.querySelector('.nav_aboutme');
-  const projects = nav.querySelector('.nav_projects');
-  const contact = nav.querySelector('.nav_contact');
+  let home = nav.querySelector('.nav_home');
+  let aboutMe = nav.querySelector('.nav_aboutme');
+  let projects = nav.querySelector('.nav_projects');
+  let contact = nav.querySelector('.nav_contact');
 
 
   let scrollMove;
@@ -139,8 +139,20 @@ window.onload = function () {
     }
   });
 
+  const btnList = [home ,aboutMe ,projects ,contact];
 
-
+  btnList.forEach(function(selector,idx){
+    selector.addEventListener('click', function (e) {
+      console.log(selector);
+      if (permission) {
+        permission = false;
+        page = idx;
+        scrollToanime();
+        pagetab();
+      }
+    })
+  })
+/*
   // 각 사이드버튼 클릭시 이동
   home.addEventListener('click', function () {
     if (permission) {
@@ -177,6 +189,7 @@ window.onload = function () {
       pagetab();
     }
   });
+  */
 
   pagetab();
   
@@ -188,6 +201,6 @@ window.onload = function () {
     scrollTo(0, 0);
     page = 0;
     permission = true;
-  }, 100);
+  }, 10);
 }
-}, 100); // settimeout end ----
+}, 10); // settimeout end ----
