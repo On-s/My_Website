@@ -1,7 +1,7 @@
 // 바닐라 JS 로 구현
 // setTimeout(() => {
   let permission = true;
-  const html = document.getElementsByTagName('html')[0];
+  const htmlLink = document.getElementsByTagName('html')[0];
   const wrap = document.getElementById('wrap');
   
   const header = wrap.querySelector('header');
@@ -21,7 +21,7 @@
   let scrollMove;
 
   let page = 0;
-  let htmlh = html.clientHeight;
+  let htmlh = htmlLink.clientHeight;
   
 
   // scroll 이동 애니메이션
