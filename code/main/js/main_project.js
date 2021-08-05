@@ -30,6 +30,7 @@ jsonData.onreadystatechange = function () {
     let linkArr = [];
     let pThumbnailArr = [];
     let descriptionArr = [];
+    let codelinkArr = [];
 
     // 배열에 data 값 넣기
     for (const i in data) {
@@ -47,17 +48,21 @@ jsonData.onreadystatechange = function () {
       alink = data[i].description;
       descriptionArr.push(alink);
     }
-    
+    for (const i in data) {
+      let alink;
+      alink = data[i].code;
+      codelinkArr.push(alink);
+    }
+
     // Li 생성
     function mLi(count, position) {
       for (let i = 0; i < count; i++) {
         let mLi = document.createElement('li');
         let p_thum = `<div class="p_thum"><img scr="${pThumbnailArr[i]}" alt="project thumnail img" class="thumimg"></div>`
         let p_Description = `<div class="p_Description"><p>${descriptionArr[i]}</p></div>`
-        let p_link = `<div class="p_link""></div>`
-        let p_process = `<div class="p_process"></div>`
+        let p_link = `<div class="p_link"><a href="${linkArr[i]}">SiteLink</a><a href="${codelinkArr[i]}">Github</a><a href="#">Process</a></div>`
         let con = `<a href="${linkArr[i]}">${Object.keys(data)[i]}</a>`;
-        let projectBox = '<div class="project_box">' + p_link + p_Description + p_thum + p_process + '</div>'
+        let projectBox = '<div class="project_box">' + p_link + p_Description + p_thum + '</div>'
         mLi.innerHTML = con + projectBox;
         mLi.style.width = (100 / proLinkLen) + '%';
         position.appendChild(mLi);

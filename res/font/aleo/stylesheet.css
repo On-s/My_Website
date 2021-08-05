@@ -1,0 +1,59 @@
+@font-face {
+    font-family: 'Aleo-Bold';
+    src: url('Aleo-Bold.otf') format('otf'),
+        url('Aleo-Bold.woff2') format('woff2'),
+        url('Aleo-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Aleo-BoldItalic';
+    src: url('Aleo-BoldItalic.otf') format('otf'),
+        url('Aleo-BoldItalic.woff2') format('woff2'),
+        url('Aleo-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Aleo-Italic';
+    src: url('Aleo-Italic.otf') format('otf'),
+        url('Aleo-Italic.woff2') format('woff2'),
+        url('Aleo-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Aleo-LightItalic';
+    src: url('Aleo-LightItalic.otf') format('otf'),
+        url('Aleo-LightItalic.woff2') format('woff2'),
+        url('Aleo-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Aleo-Regular';
+    src: url('Aleo-Regular.otf') format('otf'),
+        url('Aleo-Regular.woff2') format('woff2'),
+        url('Aleo-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Aleo-Light';
+    src: url('Aleo-Light.otf') format('otf'),
+        url('Aleo-Light.woff2') format('woff2'),
+        url('Aleo-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
