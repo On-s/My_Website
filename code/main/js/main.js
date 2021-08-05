@@ -1,5 +1,5 @@
 // 바닐라 JS 로 구현
-setTimeout(() => {
+// setTimeout(() => {
   let permission = true;
   const html = document.getElementsByTagName('html')[0];
   const wrap = document.getElementById('wrap');
@@ -178,7 +178,7 @@ setTimeout(() => {
   });
 
   pagetab();
-}, 100); // settimeout end ----
+// }, 100); // settimeout end ----
 
 
 
