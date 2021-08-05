@@ -58,7 +58,7 @@ jsonData.onreadystatechange = function () {
     function mLi(count, position) {
       for (let i = 0; i < count; i++) {
         let mLi = document.createElement('li');
-        let p_thum = `<div class="p_thum"><img scr="${pThumbnailArr[i]}" alt="project thumnail img" class="thumimg"></div>`
+        let p_thum = `<div class="p_thum"><img src="${pThumbnailArr[i]}" alt="project thumnail img"></div>`
         let p_Description = `<div class="p_Description"><p>${descriptionArr[i]}</p></div>`
         let p_link = `<div class="p_link"><a href="${linkArr[i]}">SiteLink</a><a href="${codelinkArr[i]}">Github</a><a href="#">Process</a></div>`
         let con = `<a href="${linkArr[i]}">${Object.keys(data)[i]}</a>`;

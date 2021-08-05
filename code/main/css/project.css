@@ -35,7 +35,7 @@
 }
 
 .proCon li>a {
-  font:700 3.5rem "Calibri";
+  font:700 3.5rem "Aleo-Regular";
   color: #f2f2f2;
   position: absolute;
   top: 0%;
@@ -52,16 +52,20 @@
   padding: 3rem;
   box-sizing: border-box;
   background-color: rgba(215,217,225,0.1);
-  clip-path: polygon(20px 0, calc(100% - 20px) 0, 100% 20px, 
+  /* clip-path: polygon(20px 0, calc(100% - 20px) 0, 100% 20px, 
   100% calc(100% - 20px), calc(100% - 20px) 100%, 20px 100%, 
-  0 calc(100% - 20px), 0 20px);
+  0 calc(100% - 20px), 0 20px); */
 }
 
 .p_thum {
-  background-color: #fff;
   grid-column: 1 / 3;
   grid-row: 1 / 5;
   padding: 2rem;
+}
+.p_thum img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .p_Description {
@@ -78,17 +82,24 @@
   height: 100%;
   padding: 1rem;
   box-sizing: border-box;
-  background-color: #fff;
+
 }
 .p_Description dt {
+  color : #f2f2f2;
   font-size: 1.5rem;
   padding-bottom: 1rem;
 }
 .p_Description dd {
   padding-bottom: 0.5rem;
+  color:#f2f2f2;
 }
 .p_Description span{
+  color: #9292f2;;
   font-weight: bold;
+}
+
+.fa-drumstick-bite {
+  color: #FD7E14;
 }
 
 .p_link {
@@ -101,7 +112,8 @@
 }
 
 .p_link a {
-  background-color: #fff;
+  font: 500 1rem "";
+  background-color: rgba(242,242,242,0.8);
   padding: 1rem;
   margin-right: 0.25rem;
 }
