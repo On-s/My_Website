@@ -25,8 +25,6 @@ let proArr = [progress_html, progress_css, progress_js, progress_jq, progress_ai
 
 
 
-let page = 1;
-let htmlh = html.clientHeight;
 
 // progress animation 
 function tag(progress, i) {

@@ -1,15 +1,16 @@
 // 바닐라 JS 로 구현
-// setTimeout(() => {
+setTimeout(() => {
+window.onload = function () {
   let permission = true;
   const htmlLink = document.getElementsByTagName('html')[0];
   const wrap = document.getElementById('wrap');
-  
+
   const header = wrap.querySelector('header');
   const downScrollBtn = header.querySelector('.down_scroll');
   const downScrollBtn2 = document.querySelector('.down_scroll2');
   const downScrollBtn3 = document.querySelector('.down_scroll3');
   const upScrollBtn = document.querySelector('.up_scroll');
-  
+
   const nav = wrap.querySelector('.nav');
   //  side btn 구현
   const home = nav.querySelector('.nav_home');
@@ -22,7 +23,7 @@
 
   let page = 0;
   let htmlh = htmlLink.clientHeight;
-  
+
 
   // scroll 이동 애니메이션
   let scrollToanime = function () {
@@ -64,14 +65,14 @@
   };
 
 
-  let currentPage = function (element,page) {
+  let currentPage = function (element, page) {
     element.classList.add('add');
     let parent = element.parentNode;
     let li = parent.getElementsByTagName('li');
     let liLen = parent.getElementsByTagName('li').length;
     for (let i = 0; i < liLen; i++) {
       li[i].classList.remove('add');
-      if (i===page) {
+      if (i === page) {
         li[i].classList.add('add');
       }
     }
@@ -80,16 +81,16 @@
   function pagetab() {
     switch (page) {
       case 0:
-        currentPage(home,0)
+        currentPage(home, 0)
         break;
       case 1:
-        currentPage(aboutMe,1)
+        currentPage(aboutMe, 1)
         break;
       case 2:
-        currentPage(projects,2)
+        currentPage(projects, 2)
         break;
       case 3:
-        currentPage(contact,3)
+        currentPage(contact, 3)
         break;
       default:
         console.log('page error');
@@ -178,15 +179,15 @@
   });
 
   pagetab();
-// }, 100); // settimeout end ----
-
-
-
-// 새로고침시 맨위로 올라가기
-window.onload = function () {
+  
+  
+  
+  // 새로고침시 맨위로 올라가기
+  
   setTimeout(() => {
     scrollTo(0, 0);
     page = 0;
     permission = true;
   }, 100);
 }
+}, 100); // settimeout end ----
