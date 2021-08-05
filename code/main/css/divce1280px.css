@@ -26,6 +26,9 @@
   }
 
   /* infographics ----------------------------------- */
+  .info_con {
+    padding: 0;
+  }
   .tab_con {
     top: -5%;
   }
@@ -99,10 +102,10 @@
   }
 
   .nextbtn {
-    right: -2%;
+    right: 0;
+  }
+  .prebtn {
+    left: 0;
   }
 
-  .prebtn {
-    left: 3%;
-  }
 }
