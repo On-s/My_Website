@@ -7,7 +7,7 @@ proCon.appendChild(setUl);
 const proConUl = proCon.querySelector('ul');
 
 
-// 객체 데이터
+// 프로젝트 데이터
 const projectLink = {
   "Renewal Website": {
     "link": "https://renewal-website.vercel.app/html/bhc_renewal_main.html",
@@ -18,17 +18,14 @@ const projectLink = {
   "data01": {
     "link": "https://naver.com",
     "explanation": "01 01 01",
-    "Date": "21.08.14"
+    "Date": "21.08.14",
+    "img": "../res/"
   },
   "data02": {
     "link": "##",
     "explanation": "02 02 02",
-    "Date": "21.08.14"
-  },
-  "data03": {
-    "link": "###",
-    "explanation": "03 03 03",
-    "Date": "21.08.14"
+    "Date": "21.08.14",
+    "img": "../res/"
   }
 }
 // 객체 길이구하기
@@ -37,32 +34,38 @@ let proLinkLen = Object.keys(projectLink).length;
 console.log(proLinkLen);
 
 // 배열에 link,ex 값 넣기 
-let linkArray = [];
-let exArray = [];
-let proName = [];
+let linkArr = [];
+let exArr = [];
+let pThumbnailArr = [];
 
 for (const i in projectLink) {
   let alink;
   alink = projectLink[i].link;
-  linkArray.push(alink);
+  linkArr.push(alink);
 }
 
 for (const i in projectLink) {
   let ex;
   ex = projectLink[i].explanation;
-  exArray.push(ex);
+  exArr.push(ex);
 }
 
 // Li 생성
 function mLi(count, position) {
   for (let i = 0; i < count; i++) {
     let mLi = document.createElement('li');
-    let con = `<a href="${linkArray[i]}">${Object.keys(projectLink)[i]}</a><div class="explanation">${exArray[i]}</div><div class="proimg"></div>`;
-    mLi.innerHTML = con;
+    let p_thum = `<div class="p_thum"></div>`
+    let p_Description = `<div class="p_Description"></div>`
+    let p_link = `<div class="p_link""></div>`
+    // let p_CodeSource = `<div class="p_CodeSource"></div>`
+    let p_process = `<div class="p_process"></div>`
+    let con = `<a href="${linkArr[i]}">${Object.keys(projectLink)[i]}</a><div class="explanation">${exArr[i]}</div>`;
+    let projectBox = '<div class="project_box">'+p_link+p_Description+p_thum+p_process+'</div>'
+    mLi.innerHTML = con + projectBox;
     mLi.style.width = (100 / proLinkLen) + '%';
     position.appendChild(mLi);
   }
-}
+}+
 mLi(proLinkLen, proConUl);
 
 

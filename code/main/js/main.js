@@ -17,7 +17,6 @@ setTimeout(() => {
   const projects = nav.querySelector('.nav_projects');
   const contact = nav.querySelector('.nav_contact');
 
-  const info_AbBtn = document.getElementsByClassName('btn_box')[0];
 
   let scrollMove;
 
@@ -74,10 +73,10 @@ setTimeout(() => {
       li[i].classList.remove('add');
       if (i===page) {
         li[i].classList.add('add');
-        console.log('same');
       }
     }
   }
+
   function pagetab() {
     switch (page) {
       case 0:
@@ -135,6 +134,7 @@ setTimeout(() => {
       permission = false;
       page = 0;
       scrollToanime();
+      pagetab()
     }
   });
 
@@ -178,7 +178,7 @@ setTimeout(() => {
   });
 
   pagetab();
-}, 50); // settimeout end ----
+}, 100); // settimeout end ----
 
 
 

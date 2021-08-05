@@ -1,4 +1,3 @@
-
 /* project -------------------------------------------------------------- */
 #project {
   position: relative;
@@ -32,7 +31,7 @@
   align-items: center;
   width: 100%;
   height: 100%;
-  
+
 }
 
 .proCon li>a {
@@ -48,14 +47,49 @@
   height: auto;
 }
 
-.proimg {
+.project_box {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
   width: 80%;
   height: 80%;
-  background-color: #fff;
+  padding: 3rem;
+  box-sizing: border-box;
+  background-color: #aaa;
   /* clip-path: polygon(20px 0, calc(100% - 20px) 0, 100% 20px, 
   100% calc(100% - 20px), calc(100% - 20px) 100%, 20px 100%, 
   0 calc(100% - 20px), 0 20px); */
 }
+
+.p_thum {
+  background-color: #fff;
+  grid-column: 1 / 3;
+  grid-row: 1 / 5;
+  padding: 2rem;
+}
+.p_Description{
+  grid-column: 3/5;
+  grid-row: 1/3;
+  background-color: #EEC74E;
+  padding: 2rem;
+}
+.p_link{
+  grid-column: 3/5;
+  grid-row: 3/4;
+  background-color: #BA4D7A;
+  padding: 2rem;
+}
+.p_process{
+  grid-column: 3/5;
+  grid-row: 4/5;
+  background-color: #CEB8FA;
+  padding: 2rem;
+}
+/* .p_CodeSource{
+  grid-column: 3/5;
+  grid-row: 3/4;
+  background-color: #10EDA1;
+} */
 
 .nextbtn,
 .prebtn {
