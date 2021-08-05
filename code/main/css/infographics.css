@@ -35,8 +35,8 @@
   position: relative;
   width: 80%;
   height: 100%;
-  float: right;
   margin-top: 3rem;
+  margin-left: 10%;
 }
 
 .about_con,
