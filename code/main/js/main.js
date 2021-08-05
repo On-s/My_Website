@@ -1,5 +1,5 @@
 // 바닐라 JS 로 구현
-window.onload = function () {
+setTimeout(() => {
   let permission = true;
   const html = document.getElementsByTagName('html')[0];
   const wrap = document.getElementById('wrap');
@@ -178,11 +178,15 @@ window.onload = function () {
   });
 
   pagetab();
+}, 100); // settimeout end ----
+
+
 
 // 새로고침시 맨위로 올라가기
+window.onload = function () {
   setTimeout(() => {
     scrollTo(0, 0);
     page = 0;
     permission = true;
-  }, 50);
+  }, 100);
 }
