@@ -21,7 +21,9 @@
     justify-content: center;
     align-items: center;
   }
-
+  .down_scroll ,.down_scroll2,.down_scroll3,.up_scroll {
+    display: none;
+  }
 
   /* infographics ----------------------------------- */
   .tab_con {
