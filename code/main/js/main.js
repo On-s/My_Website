@@ -102,10 +102,10 @@ window.onload = function () {
 
   // 다운버튼 클릭시
 
-  const downBtnList = [downScrollBtn,downScrollBtn2,downScrollBtn3,upScrollBtn]
+  const downBtnList = [downScrollBtn, downScrollBtn2, downScrollBtn3, upScrollBtn]
 
-  downBtnList.forEach(function(selector) {
-    selector.addEventListener('click',function(e) {
+  downBtnList.forEach(function (selector) {
+    selector.addEventListener('click', function (e) {
       e.preventDefault();
       if (permission) {
         permission = false;
@@ -113,7 +113,7 @@ window.onload = function () {
         scrollToanime();
         pagetab();
       }
-      if (selector===upScrollBtn) {
+      if (selector === upScrollBtn) {
         permission = false;
         page = 0;
         scrollToanime();
@@ -122,9 +122,9 @@ window.onload = function () {
     });
   });
 
-  const btnList = [home ,aboutMe ,projects ,contact];
+  const btnList = [home, aboutMe, projects, contact];
 
-  btnList.forEach(function(selector,idx){
+  btnList.forEach(function (selector, idx) {
     selector.addEventListener('click', function (e) {
       console.log(selector);
       if (permission) {
@@ -136,18 +136,18 @@ window.onload = function () {
     });
   });
   pagetab();
-  
-  
-  
-  
+
+
+
+
   wrap.addEventListener('mousewheel', scrollMove, true);
   wrap.addEventListener('DOMMouseScroll', scrollMove, false);
-  
-  
+
+
   // 새로고침시 맨위로 올라가기
-    setTimeout(() => {
-      scrollTo(0, 0);
-      page = 0;
-      permission = true;
-    }, 50);
+  setTimeout(() => {
+    scrollTo(0, 0);
+    page = 0;
+    permission = true;
+  }, 50);
 }
