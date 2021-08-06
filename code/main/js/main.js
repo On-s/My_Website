@@ -1,12 +1,13 @@
 // 바닐라 JS 로 구현
-setTimeout(() => {
+// setTimeout(() => {
 window.onload = function () {
+
   let permission = true;
   const htmlLink = document.getElementsByTagName('html')[0];
   const wrap = document.getElementById('wrap');
 
   const header = wrap.querySelector('header');
-  const downScrollBtn = header.querySelector('.down_scroll');
+  const downScrollBtn = document.querySelector('.down_scroll');
   const downScrollBtn2 = document.querySelector('.down_scroll2');
   const downScrollBtn3 = document.querySelector('.down_scroll3');
   const upScrollBtn = document.querySelector('.up_scroll');
@@ -99,44 +100,26 @@ window.onload = function () {
   }
 
 
-  wrap.addEventListener('mousewheel', scrollMove, true);
-  wrap.addEventListener('DOMMouseScroll', scrollMove, false);
-
-
   // 다운버튼 클릭시
-  downScrollBtn.addEventListener('click', function (e) {
-    if (permission) {
-      permission = false;
-      page++;
-      scrollToanime();
-      pagetab();
-    }
-  });
 
-  downScrollBtn2.addEventListener('click', function (e) {
-    if (permission) {
-      permission = false;
-      page++;
-      scrollToanime();
-      pagetab();
-    }
-  });
-  downScrollBtn3.addEventListener('click', function (e) {
-    if (permission) {
-      permission = false;
-      page++;
-      scrollToanime();
-      pagetab();
-    }
-  });
-  // 업버튼 클릭시 
-  upScrollBtn.addEventListener('click', function (e) {
-    if (permission) {
-      permission = false;
-      page = 0;
-      scrollToanime();
-      pagetab()
-    }
+  const downBtnList = [downScrollBtn,downScrollBtn2,downScrollBtn3,upScrollBtn]
+
+  downBtnList.forEach(function(selector) {
+    selector.addEventListener('click',function(e) {
+      e.preventDefault();
+      if (permission) {
+        permission = false;
+        page++;
+        scrollToanime();
+        pagetab();
+      }
+      if (selector===upScrollBtn) {
+        permission = false;
+        page = 0;
+        scrollToanime();
+        pagetab();
+      }
+    });
   });
 
   const btnList = [home ,aboutMe ,projects ,contact];
@@ -150,57 +133,21 @@ window.onload = function () {
         scrollToanime();
         pagetab();
       }
-    })
-  })
-/*
-  // 각 사이드버튼 클릭시 이동
-  home.addEventListener('click', function () {
-    if (permission) {
-      permission = false;
-      page = 0;
-      scrollToanime();
-      pagetab();
-    }
+    });
   });
-
-  aboutMe.addEventListener('click', function () {
-    if (permission) {
-      permission = false;
-      page = 1;
-      scrollToanime();
-      pagetab();
-    }
-  });
-
-  projects.addEventListener('click', function () {
-    if (permission) {
-      permission = false;
-      page = 2;
-      scrollToanime();
-      pagetab();
-    }
-  });
-
-  contact.addEventListener('click', function () {
-    if (permission) {
-      permission = false;
-      page = 3;
-      scrollToanime();
-      pagetab();
-    }
-  });
-  */
-
   pagetab();
   
   
   
-  // 새로고침시 맨위로 올라가기
   
-  setTimeout(() => {
-    scrollTo(0, 0);
-    page = 0;
-    permission = true;
-  }, 10);
+  wrap.addEventListener('mousewheel', scrollMove, true);
+  wrap.addEventListener('DOMMouseScroll', scrollMove, false);
+  
+  
+  // 새로고침시 맨위로 올라가기
+    setTimeout(() => {
+      scrollTo(0, 0);
+      page = 0;
+      permission = true;
+    }, 50);
 }
-}, 10); // settimeout end ----

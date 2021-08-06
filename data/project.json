@@ -11,14 +11,14 @@
     "code" : "",
     "description": "<dl><dt>01 01 01</dt></dl>",
     "Date": "21.08.14",
-    "img": "../res/"
+    "img": "../../res/"
   },
   "data02": {
     "link": "##",
     "code" : "",
     "description": "<dl><dt>02 02 02</dt></dl>",
     "Date": "21.08.14",
-    "img": "../res/"
+    "img": "../../res/"
   }
 }
 

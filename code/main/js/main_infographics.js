@@ -20,12 +20,7 @@ let progress_jq = document.getElementsByTagName('progress')[3];
 let progress_ai = document.getElementsByTagName('progress')[4];
 let progress_ps = document.getElementsByTagName('progress')[5];
 
-
 let proArr = [progress_html, progress_css, progress_js, progress_jq, progress_ai, progress_ps];
-
-
-
-
 
 // progress animation 
 function tag(progress, i) {
@@ -70,31 +65,29 @@ function clickchange(data1, data2) {
 aboutBtn.classList.add('select_btn');
 aboutBtn.addEventListener('click', function () {
   clickchange(skillCon, aboutCon);
-  // tag(progress_html, 0);
-  // tag(progress_css, 0);
-  // tag(progress_js, 0);
-  // tag(progress_jq, 0);
-  // tag(progress_ai, 0);
-  // tag(progress_ps, 0);
-  for(let i=0; i<progressEl.length; i++){
+  for (let i = 0; i < progressEl.length; i++) {
     tag(progressEl[i], 0);
   }
   aboutBtn.classList.add('select_btn');
   skillBtn.classList.remove('select_btn');
-})
-var skillGage = {html: 95, css:90, js:90 , jq:85, ai :50 , ps : 40}
+});
+
+
+let skillGage = {
+  html: 95,
+  css: 90,
+  js: 90,
+  jq: 85,
+  ai: 50,
+  ps: 40
+}
+let arrSkillgage = Object.values(skillGage);
 
 skillBtn.addEventListener('click', function () {
   clickchange(aboutCon, skillCon);
-  for(let i in skillGage){
-
+  for (let i = 0; i < arrSkillgage.length; i++) {
+    tag(progressEl[i], arrSkillgage[i] / 100);
   }
-  tag(progress_html, 0.95);
-  tag(progress_css, 0.90);
-  tag(progress_js, 0.90);
-  tag(progress_jq, 0.85);
-  tag(progress_ai, 0.50);
-  tag(progress_ps, 0.40);
   skillBtn.classList.add('select_btn');
   aboutBtn.classList.remove('select_btn');
-})
+});

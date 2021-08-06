@@ -31,7 +31,26 @@
   <div id="wrap">
     <!-- header ======================================================================= -->
     <header id="headerCon">
-      <h1><a href="#" class="logo">by Ons <i class="fas fa-desktop"></i></a></h1>
+      <div class="ons">Ons Web Portfolio</div>
+      <svg viewbox="0 0 100 20">
+        <defs>
+          <linearGradient id="gradient" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="95%" stop-color="#fff" />
+            <stop offset="5%" stop-color="#1C1F42" />
+          </linearGradient>
+          <pattern id="wave" x="0" y="0" width="120" height="20" patternUnits="userSpaceOnUse">
+            <path id="wavePath" d="M-40 9 Q-30 7 -20 9 T0 9 T20 9 T40 9 T60 9 T80 9 T100 9 T120 9 V20 H-40z"
+              mask="url(#mask)" fill="url(#gradient)">
+              <animateTransform attributeName="transform" begin="0s" dur="1.5s" type="translate" from="0,0" to="40,0"
+                repeatCount="indefinite" />>
+            </path>
+          </pattern>
+        </defs>
+        <text text-anchor="middle" x="50" y="15" font-size="17" fill="url(#wave)" fill-opacity="0.8">On</text>
+        <text text-anchor="middle" x="50" y="15" font-size="17" fill="url(#gradient)" fill-opacity="0.1">On</text>
+      </svg>
+      <div class="try">Trying to make the website awesome <i class="fas fa-desktop"></i></div>
+      <button type="button" class="down_scroll"><i class="fas fa-angle-double-down"></i></button>
     </header>
 
     <!-- nav ========================================================================= -->
@@ -109,7 +128,7 @@
           </div>
         </div>
       </div>
-      <button type="button" class="down_scroll2"><i class="fas fa-angle-double-down"></i></button>
+      <div class="down_scroll2"><i class="fas fa-angle-double-down"></i></div>
     </section>
 
     <!-- portfolio ===================================================================== -->
@@ -121,30 +140,27 @@
       <div class="proCon">
         <!-- <ul><li><a href="#"></a><div></div></li></ul> -->
         <div class="pro_btn_box">
-        <button type="button" class="nextbtn"><i class="fas fa-arrow-right"></i></button>
-        <button type="button" class="prebtn"><i class="fas fa-arrow-left"></i></button>
+          <div class="nextbtn"><i class="fas fa-arrow-right"></i></div>
+          <div class="prebtn"><i class="fas fa-arrow-left"></i></div>
+        </div>
       </div>
-      </div>
-      <button type="button" class="down_scroll3"><i class="fas fa-angle-double-down"></i></button>
+      <div class="down_scroll3"><i class="fas fa-angle-double-down"></i></div>
     </section>
 
     <section id="contact">
       <div class="page_intend">본 페이지는 상업적 목적이 아닌 개인 포트폴리오용으로 제작되었습니다.<br />
         This page is intended for personal portfolios, not commercial purposes.</div>
-      <button type="button" class="up_scroll"><i class="fas fa-angle-double-up"></i></button>
+      <div class="up_scroll"><i class="fas fa-angle-double-up"></i></div>
     </section>
   </div>
 
 
-  <script src="../common/jq/jquery-3.6.0.js"></script>
-  <script src="../common/jq/jquery-3.6.0.min.js"></script>
-  <script src="./js/import.js"></script>
+
+  <script src="./js/main.js"></script>
   <script src="./js/main_infographics.js"></script>
   <script src="./js/main_project.js"></script>
-  <script src="./js/nav.js"></script>
-  <script src="./js/main.js"></script>
-  <!-- <script src="./bubbles.js"></script> -->
 </body>
+
 
 
 </html>
