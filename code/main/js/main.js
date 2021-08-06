@@ -6,7 +6,7 @@ window.onload = function () {
   const htmlLink = document.getElementsByTagName('html')[0];
   const wrap = document.getElementById('wrap');
 
-  const header = wrap.querySelector('header');
+  // const header = wrap.querySelector('header');
   const downScrollBtn = document.querySelector('.down_scroll');
   const downScrollBtn2 = document.querySelector('.down_scroll2');
   const downScrollBtn3 = document.querySelector('.down_scroll3');
@@ -21,7 +21,7 @@ window.onload = function () {
 
 
   let scrollMove;
-
+  // 페이지변수
   let page = 0;
   let htmlh = htmlLink.clientHeight;
 
@@ -43,7 +43,7 @@ window.onload = function () {
     e.preventDefault();
     if (permission) {
       permission = false;
-
+      // 휠움직임 delta 이 음수 양수일때 
       let delta;
       if (e.wheelDelta) {
         delta = e.wheelDelta;
@@ -65,7 +65,7 @@ window.onload = function () {
     }
   };
 
-
+  // 현재 페이지 체크하는 부분
   let currentPage = function (element, page) {
     element.classList.add('add');
     let parent = element.parentNode;
@@ -78,7 +78,7 @@ window.onload = function () {
       }
     }
   }
-
+  // 페이지 변경
   function pagetab() {
     switch (page) {
       case 0:
@@ -101,9 +101,7 @@ window.onload = function () {
 
 
   // 다운버튼 클릭시
-
   const downBtnList = [downScrollBtn, downScrollBtn2, downScrollBtn3, upScrollBtn]
-
   downBtnList.forEach(function (selector) {
     selector.addEventListener('click', function (e) {
       e.preventDefault();
@@ -121,9 +119,8 @@ window.onload = function () {
       }
     });
   });
-
+  // 네비 버튼 클릭시
   const btnList = [home, aboutMe, projects, contact];
-
   btnList.forEach(function (selector, idx) {
     selector.addEventListener('click', function (e) {
       console.log(selector);
@@ -139,7 +136,7 @@ window.onload = function () {
 
 
 
-
+  // 휠이벤트 제거
   wrap.addEventListener('mousewheel', scrollMove, true);
   wrap.addEventListener('DOMMouseScroll', scrollMove, false);
 

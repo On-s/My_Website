@@ -1,3 +1,13 @@
+
+
+let skillGage = {
+  html: 95, 
+  css: 90,
+  js: 90,
+  jq: 85,
+  ai: 50,
+  ps: 40
+}
 const html = document.getElementsByTagName('html')[0];
 const infographics = document.querySelector('#infographics');
 const info_con = infographics.querySelector('.info_con');
@@ -22,6 +32,10 @@ let progress_ps = document.getElementsByTagName('progress')[5];
 
 let proArr = [progress_html, progress_css, progress_js, progress_jq, progress_ai, progress_ps];
 
+// for (let i = 0; i < proArr.length; i++) {
+  
+// }
+
 // progress animation 
 function tag(progress, i) {
   // 간격
@@ -43,8 +57,6 @@ function tag(progress, i) {
     animator()
   }, updatesPerSecond)
 }
-
-
 
 
 function clickchange(data1, data2) {
@@ -72,15 +84,7 @@ aboutBtn.addEventListener('click', function () {
   skillBtn.classList.remove('select_btn');
 });
 
-
-let skillGage = {
-  html: 95,
-  css: 90,
-  js: 90,
-  jq: 85,
-  ai: 50,
-  ps: 40
-}
+// 
 let arrSkillgage = Object.values(skillGage);
 
 skillBtn.addEventListener('click', function () {

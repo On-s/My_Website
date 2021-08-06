@@ -11,6 +11,7 @@ proCon.appendChild(setUl);
 const proConUl = proCon.querySelector('ul');
 
 
+// ajax 세팅
 if (window.XMLHttpRequest) {
   jsonData = new XMLHttpRequest();
 } else {
@@ -21,21 +22,34 @@ if (window.XMLHttpRequest) {
 jsonData.onreadystatechange = function () {
   if (jsonData.readyState === 4 && jsonData.status === 200) {
     console.log('success');
-
-    data = JSON.parse(jsonData.responseText);
+    // 데이터 저장
+    let data = JSON.parse(jsonData.responseText);
 
     //데이터 길이
     let proLinkLen = Object.keys(data).length;
 
     let permission = true;
 
+    // li 생성후 ul 에 저장
     function mLi(position) {  
       for (let i = 0; i < proLinkLen; i++) {
         let mLi = document.createElement('li');
-        let p_thum = `<div class="p_thum"><img src="${Object.values(data)[i].img}" alt="project thumnail img"></div>`
-        let p_Description = `<div class="p_Description"><p>${Object.values(data)[i].description}</p></div>`
-        let p_link = `<div class="p_link"><a href="${Object.values(data)[i].link}">SiteLink</a><a href="${Object.values(data)[i].code}">Github</a><a href="#">Process</a></div>`
+        let p_thum = `<div class="p_thum">
+        <img src="${Object.values(data)[i].img}" alt="project thumnail img">
+        </div>`
+
+        let p_Description = `<div class="p_Description">
+        <p>${Object.values(data)[i].description}</p>
+        </div>`
+
+        let p_link = `<div class="p_link">
+        <a href="${Object.values(data)[i].link}">SiteLink</a>
+        <a href="${Object.values(data)[i].code}">Github</a>
+        <a href="#">Process</a>
+        </div>`
+
         let con = `<a href="${Object.values(data)[i].link}">${Object.keys(data)[i]}</a>`;
+        
         let projectBox = '<div class="project_box">' + p_link + p_Description + p_thum + '</div>'
         mLi.innerHTML = con + projectBox;
         mLi.style.width = (100 / proLinkLen) + '%';
@@ -54,7 +68,8 @@ jsonData.onreadystatechange = function () {
     const btnPre = proCon.querySelector('.prebtn');
 
     let count = 0;
-
+    // 다음버튼
+    // 함수로 해결
     btnNext.addEventListener('click', function (e) {
       e.preventDefault();
       if (permission) {
@@ -62,14 +77,13 @@ jsonData.onreadystatechange = function () {
         if (count < proLinkLen - 1) {
           count++;
           setUl.style.marginLeft = (-100 * count) + '%';
-          console.log(count);
         }
         setTimeout(() => {
           permission = true
         }, 100);
       }
     });
-
+    // 이전버튼
     btnPre.addEventListener('click', function (e) {
       e.preventDefault();
       if (permission) {
@@ -77,7 +91,6 @@ jsonData.onreadystatechange = function () {
         if (count >= 1) {
           count--;
           setUl.style.marginLeft = (-100 * count) + '%';
-          console.log(count);
         }
         setTimeout(() => {
           permission = true
