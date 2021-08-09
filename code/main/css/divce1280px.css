@@ -76,6 +76,9 @@
   }
 
   /* project ---------------------------------------- */
+  .proCon li>a {
+    font-size: 2rem;
+  }
 
   .project_box {
     grid-template-columns: repeat(2, 1fr);
@@ -108,7 +111,7 @@
     grid-column: 1/3;
     grid-row: 5/6;
   }
-
+.proCon li>a
   .nextbtn {
     right: 0;
   }

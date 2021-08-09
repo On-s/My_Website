@@ -59,7 +59,6 @@ window.onload = function () {
         if (page === 3) return permission = true;
         page++;
       }
-      console.log("Current Page : " + page);
       scrollToanime();
       pagetab();
     }

@@ -1,10 +1,9 @@
 
-
 #wrap {
   position: relative;
   width: 100%;
   height: auto;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 
