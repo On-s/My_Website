@@ -111,17 +111,6 @@
 }
 
 
-.email_link a {
-  display: block;
-  margin: auto;
-  width: 12.5rem;
-  height: 5rem;
-  line-height: 5rem;
-  border: 2px groove #f2f2f2;
-  background-color: rgba(225, 225, 225, 0.2);
-  text-align: center;
-}
-
 .skills {
   width: 80%;
   height: 100%;

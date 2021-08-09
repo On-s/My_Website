@@ -16,8 +16,8 @@ for (let i = 0; i < bNum; i++) {
     bubble.classList.add('bubble');
     bubbleattr = bubbleCon.getElementsByClassName('.bubble')[i];
     bubble.style.left = `${Math.floor(Math.random()*96)}%`;
-    bubble.style.animation = `bubble-movement-small ${(Math.random()*15)+6}s infinite ease-in-out 0ms`;
-    bubble.style.opacity = `${(Math.floor(Math.random()*9)+5)/10}`
+    bubble.style.animation = `bubble-movement-small ${(Math.random()*12)+3}s infinite ease-in-out 0ms`;
+    bubble.style.opacity = `${(Math.floor(Math.random()*5)+5)/10}`
     bubbleCon.appendChild(bubble);
   }else {
     let bubble = document.createElement('div');
@@ -25,10 +25,10 @@ for (let i = 0; i < bNum; i++) {
     bubbleattr = bubbleCon.getElementsByClassName('.bubble')[i];
     bubble.style.left = `${Math.floor(Math.random()*96)}%`;
     bubble.style.animation = `bubble-movement-large ${(Math.random()*15)+9}s infinite ease-in-out ${Math.floor(Math.random()*500)}ms`;
-    bubble.style.opacity = `${(Math.floor(Math.random()*9)+5)/10}`
+    bubble.style.opacity = `${(Math.floor(Math.random()*5)+5)/10}`
     bubbleCon.appendChild(bubble);
   }
 }
-
+console.log((Math.floor(Math.random()*5)+5)/10);
 
 
