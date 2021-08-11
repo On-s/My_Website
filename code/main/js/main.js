@@ -18,7 +18,7 @@ window.onload = function () {
   let aboutMe = nav.querySelector('.nav_aboutme');
   let projects = nav.querySelector('.nav_projects');
   let contact = nav.querySelector('.nav_contact');
-
+  const btnList = [home, aboutMe, projects, contact];
 
   let scrollMove;
   // 페이지변수
@@ -37,6 +37,8 @@ window.onload = function () {
       permission = true;
     }, 400);
   };
+
+
 
   // 스크롤움직임이 감지됬을경우
   scrollMove = function (e) {
@@ -63,6 +65,9 @@ window.onload = function () {
       pagetab();
     }
   };
+
+
+
 
   // 현재 페이지 체크하는 부분
   let currentPage = function (element, page) {
@@ -98,6 +103,15 @@ window.onload = function () {
     }
   }
 
+  function getCurrentScroll() {
+    return (window.scrollY + window.innerHeight) / document.body.clientHeight * 100
+  }
+  document.addEventListener('scroll', () => {
+    const currentScroll = getCurrentScroll();
+    page = Math.floor((currentScroll / 100) - 1);
+    pagetab()
+  });
+
 
   // 다운버튼 클릭시
   const downBtnList = [downScrollBtn, downScrollBtn2, downScrollBtn3, upScrollBtn]
@@ -119,7 +133,6 @@ window.onload = function () {
     });
   });
   // 네비 버튼 클릭시
-  const btnList = [home, aboutMe, projects, contact];
   btnList.forEach(function (selector, idx) {
     selector.addEventListener('click', function (e) {
       console.log(selector);
@@ -140,10 +153,13 @@ window.onload = function () {
   wrap.addEventListener('DOMMouseScroll', scrollMove, false);
 
 
+
+
+
   // 새로고침시 맨위로 올라가기
   setTimeout(() => {
     scrollTo(0, 0);
     page = 0;
     permission = true;
   }, 50);
-}
+} // window.onload end
