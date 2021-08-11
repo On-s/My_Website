@@ -62,7 +62,6 @@ window.onload = function () {
         page++;
       }
       scrollToanime();
-      pagetab();
     }
   };
 
@@ -82,6 +81,20 @@ window.onload = function () {
       }
     }
   }
+
+  function getCurrentScroll() {
+    return (window.scrollY + window.innerHeight) / document.body.clientHeight * 100
+  }
+  // 스크롤값 감지
+    document.addEventListener('scroll', () => {
+    const currentScroll = getCurrentScroll();
+      page = Math.floor((currentScroll / 100) - 1);
+    console.log(page);
+      pagetab();
+  });
+
+
+
   // 페이지 변경
   function pagetab() {
     switch (page) {
@@ -103,14 +116,6 @@ window.onload = function () {
     }
   }
 
-  function getCurrentScroll() {
-    return (window.scrollY + window.innerHeight) / document.body.clientHeight * 100
-  }
-  document.addEventListener('scroll', () => {
-    const currentScroll = getCurrentScroll();
-    page = Math.floor((currentScroll / 100) - 1);
-    pagetab()
-  });
 
 
   // 다운버튼 클릭시
