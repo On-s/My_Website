@@ -11,7 +11,6 @@ proCon.appendChild(setUl);
 const proConUl = proCon.querySelector('ul');
 
 
-// ajax 세팅
 if (window.XMLHttpRequest) {
   jsonData = new XMLHttpRequest();
 } else {
@@ -69,7 +68,6 @@ jsonData.onreadystatechange = function () {
 
     let count = 0;
     // 다음버튼
-    // 함수로 해결
     btnNext.addEventListener('click', function (e) {
       e.preventDefault();
       if (permission) {

@@ -31,13 +31,6 @@
 }
 
 
-/* @keyframes bubble-up{
-  0% {
-  }
-  100% {
-  }
-} */
-
 @keyframes bubble-movement-large {
   0% {
     transform: translate3d(0, 0, 0);

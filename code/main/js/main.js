@@ -65,9 +65,6 @@ window.onload = function () {
     }
   };
 
-
-
-
   // 현재 페이지 체크하는 부분
   let currentPage = function (element, page) {
     element.classList.add('add');
@@ -94,7 +91,6 @@ window.onload = function () {
   });
 
 
-
   // 페이지 변경
   function pagetab() {
     switch (page) {
@@ -116,8 +112,6 @@ window.onload = function () {
     }
   }
 
-
-
   // 다운버튼 클릭시
   const downBtnList = [downScrollBtn, downScrollBtn2, downScrollBtn3, upScrollBtn]
   downBtnList.forEach(function (selector) {
@@ -137,6 +131,7 @@ window.onload = function () {
       }
     });
   });
+  
   // 네비 버튼 클릭시
   btnList.forEach(function (selector, idx) {
     selector.addEventListener('click', function (e) {
