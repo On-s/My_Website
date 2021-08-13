@@ -127,7 +127,6 @@ window.onload = function () {
         permission = false;
         page = 0;
         scrollToanime();
-        pagetab();
       }
     });
   });
@@ -140,7 +139,6 @@ window.onload = function () {
         permission = false;
         page = idx;
         scrollToanime();
-        pagetab();
       }
     });
   });
