@@ -121,7 +121,6 @@ window.onload = function () {
         permission = false;
         page++;
         scrollToanime();
-        pagetab();
       }
       if (selector === upScrollBtn) {
         permission = false;
